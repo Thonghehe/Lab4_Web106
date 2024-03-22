@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto 1fr 3fr 1fr auto;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+        }
+
+        header,
+        nav,
+        main,
+        aside,
+        footer {
+            padding: 20px;
+
+        }
+
+        header {
+            /* chiem toan bo khong gian trang wed */
+            grid-column: 1 / span 5;
+            background-color: rgb(150, 150, 143);
+        }
+
+        nav {
+            /* Chiem 2 cot moi cot 1 don vi = 2/5*/
+            grid-column: 2 / span 1;
+            background-color: rgb(246, 234, 217);
+        }
+
+        main {
+            /* Chiem 3 cot moi cot 1 don vi */
+            grid-column: 3 / span 1;
+            background-color: rgb(133, 101, 62);
+        }
+
+        aside {
+            grid-column: 4 / span 1;
+            background-color: chartreuse;
+        }
+
+        footer {
+            grid-column: 4 / span 1;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Left</nav>
+        <main>Content</main>
+        <aside>Right</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
